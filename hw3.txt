@@ -1,0 +1,15 @@
+import 'package:intl/intl.dart';
+
+void main() {
+  // 날짜 입력 (예시: '2025-03-11')
+  var input = '2025-03-11';
+
+  // 입력된 문자열을 DateTime 객체로 변환
+  DateTime date = DateTime.parse(input);
+
+  // 요일을 가져오기
+  String dayOfWeek = DateFormat('EEEE').format(date);
+
+  // 요일 출력 (예: 화요일)
+  print(dayOfWeek);
+}

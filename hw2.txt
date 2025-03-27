@@ -1,0 +1,62 @@
+void main() {
+  int n = 10;  // 사각형의 크기 (10 x 10)
+
+  for (int i = 0; i < n; i++) {
+    for (int j = 0; j < n; j++) {
+      if (i == 0 || i == n - 1 || j == 0 || j == n - 1) {
+        print('.', terminator: '');  // 테두리는 '.' 으로 출력
+      } else {
+        print(' ', terminator: '');  // 내부는 공백으로 출력
+      }
+    }
+    print();  // 각 행이 끝나면 줄 바꿈
+  }
+}
+
+
+void main() {
+  int n = 10;
+
+  for (int i = 0; i < n; i++) {
+    for (int j = 0; j < n; j++) {
+      if (i == j) {
+        print('/', terminator: '');  // 대각선은 '/'로 출력
+      } else {
+        print('.', terminator: '');  // 나머지 부분은 '.'로 출력
+      }
+    }
+    print();
+  }
+}
+
+
+void main() {
+  int n = 10;
+
+  for (int i = 0; i < n; i++) {
+    for (int j = 0; j < n; j++) {
+      if (i + j == n - 1) {
+        print('\\', terminator: '');  // 반대 방향 대각선은 '\'로 출력
+      } else {
+        print('.', terminator: '');  // 나머지 부분은 '.'로 출력
+      }
+    }
+    print();
+  }
+}
+
+
+void main() {
+  int n = 10;
+
+  for (int i = 0; i < n; i++) {
+    for (int j = 0; j < n; j++) {
+      if (i == j || i + j == n - 1) {
+        print('X', terminator: '');  // X 모양으로 대각선을 출력
+      } else {
+        print('.', terminator: '');  // 나머지 부분은 '.'로 출력
+      }
+    }
+    print();
+  }
+}
